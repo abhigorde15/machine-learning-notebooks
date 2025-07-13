@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} My Website  {% endblock %}</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    header{
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+    footer{
+      background-color: yellow; 
+      padding: 10px;
+      margin-top: 20px;
+
+    }
+  </style>
+</head>
+<body >
+  <header>
+    <h2>My Site</h2> 
+    <nav>
+      <a href="/">Home</a> 
+      <a href="/about">About</a>
+    </nav>
+  </header>
+  {% block content %} 
+   
+  {% endblock %}
+  <footer>
+    <p>@2025 Aspiring AIML Engineer @Abhishek</p>
+    </footer>
+</body>
+</html>
