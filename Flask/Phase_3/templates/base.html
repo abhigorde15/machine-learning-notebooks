@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} Feedback Site  {% endblock %}</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    header,footer{
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+    nav a{
+      margin: 0 10px; 
+      color: white;
+      text-decoration: none;
+    }
+    main{
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body >
+  <header>
+    <h2>Feed Back Page</h2> 
+    <nav>
+      <a href="/feedback">Feedback</a> 
+    
+    </nav>
+  </header>
+  <main>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul style="color: green;">
+    {% for msg in messages %}
+    <li>{{msg}}</li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+  {% block content %} 
+   
+  {% endblock %}
+  </main>
+  <footer>
+    <p>@2025 Aspiring AIML Engineer @Abhishek</p>
+    </footer>
+</body>
+</html>
